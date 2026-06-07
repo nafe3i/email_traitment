@@ -22,6 +22,7 @@ Lancement :
     uvicorn api:app --host 0.0.0.0 --port 8000 --reload
 """
 
+import os
 import sys
 import uuid
 import logging
@@ -57,6 +58,8 @@ init_db()
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+ALLOWED_DOMAIN = os.getenv("ALLOWED_REGISTER_DOMAIN", "aui.ma")
 
 # ─── App ───────────────────────────────────────────────────────────────────────
 
@@ -124,6 +127,12 @@ def login(request: Request, credentials: UserLogin, db: Session = Depends(get_db
 @limiter.limit("3/hour")
 def register(request: Request, user_data: UserCreate, db: Session = Depends(get_db)):
     """Inscription publique — role viewer attribue automatiquement."""
+    domain = user_data.email.split("@")[-1].lower()
+    if domain != ALLOWED_DOMAIN:
+        raise HTTPException(
+            status_code=403,
+            detail=f"Inscription réservée aux adresses @{ALLOWED_DOMAIN}",
+        )
     try:
         return register_user(db, user_data)
     except ValueError as e:
