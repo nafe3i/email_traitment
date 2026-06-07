@@ -33,12 +33,16 @@ VALID_CATEGORIES = {
 def embed(text: str) -> list | None:
     try:
         r = requests.post(
-            f"{OLLAMA_BASE}/api/embeddings",
-            json={"model": EMBED_MODEL, "prompt": text},
+            f"{OLLAMA_BASE}/api/embed",
+            json={"model": EMBED_MODEL, "input": text},
             timeout=OLLAMA_TIMEOUT,
         )
         r.raise_for_status()
-        return r.json().get("embedding")
+        data = r.json()
+        embedding = data.get("embeddings", [[]])[0]
+        if not embedding:
+            raise ValueError(f"Ollama a retourné un vecteur vide pour le modèle {EMBED_MODEL}")
+        return embedding
     except requests.RequestException as e:
         logger.error(f"Embed request error: {e}")
         return None
