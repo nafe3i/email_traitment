@@ -8,6 +8,7 @@ import json
 import base64
 import logging
 import re
+from email.utils import parseaddr
 from pathlib import Path
 from typing import List, Optional
 
@@ -122,7 +123,7 @@ def parse_gmail_message(msg_data: dict) -> dict:
         if name == "subject":
             subject = h.get("value", "")
         elif name == "from":
-            sender = h.get("value", "")
+            _, sender = parseaddr(h.get("value", ""))
 
     # Extraction du corps de l'e-mail
     payload = msg_data.get("payload", {})
@@ -157,14 +158,19 @@ def fetch_unread_emails(service: Resource, max_results: int = 20) -> List[dict]:
             
             email_info = parse_gmail_message(msg_data)
             parsed_emails.append(email_info)
-            
-            # Marquer l'email comme lu
-            service.users().messages().batchModify(
-                userId="me",
-                body={"ids": [msg["id"]], "removeLabelIds": ["UNREAD"]},
-            ).execute()
-            
+
         return parsed_emails
     except Exception as e:
         logger.error(f"Erreur lors de la récupération des e-mails Gmail: {e}")
         return []
+
+
+def mark_email_as_read(service: Resource, message_id: str) -> None:
+    """Retire le label UNREAD après un traitement réussi."""
+    try:
+        service.users().messages().batchModify(
+            userId="me",
+            body={"ids": [message_id], "removeLabelIds": ["UNREAD"]},
+        ).execute()
+    except Exception as e:
+        logger.error(f"Impossible de marquer l'email {message_id} comme lu: {e}")
