@@ -1,0 +1,284 @@
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                                                                               ║
+║                    🎯 PHASE 1 - SÉCURITÉ CRITIQUE 🎯                         ║
+║                         START HERE - 1 SEMAINE                               ║
+║                                                                               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+
+RÉSUMÉ RAPIDE
+═════════════
+
+Score actuel: 62/100
+Score après Phase 1: 75/100 ✅
+Effort: 80 heures (1 semaine pour 1 dev)
+Équipe: 1 développeur
+Blockers: 7 problèmes critiques à fixer
+
+
+PROBLÈMES À RÉSOUDRE
+════════════════════
+
+1. ❌ PAS D'AUTHENTIFICATION
+   → Implémenter JWT (register/login)
+   → Protéger tous les endpoints
+
+2. ❌ INJECTION PROMPT
+   → Créer sanitizer.py
+   → Échapper les inputs utilisateur
+
+3. ❌ TOKENS EN CLAIR
+   → Chiffrer credentials/token.json
+   → Master key depuis env SECRET_KEY
+
+4. ❌ CORS OUVERT (allow_origins=["*"])
+   → Restreindre à domaines spécifiques
+
+5. ❌ PAS DE RATE LIMITING
+   → Installer slowapi
+   → Limiter par endpoint
+
+6. ❌ VALIDATION INPUT FAIBLE
+   → EmailStr pour sender
+   → Max length sur subject/body
+
+7. ❌ AUCUN TEST
+   → Écrire 50+ tests sécurité
+
+
+PLAN PHASE 1 (1 Semaine)
+════════════════════════
+
+JOUR 1-2: AUTHENTIFICATION (15h)
+├─ pip install python-jose passlib cryptography
+├─ Créer src/auth.py
+├─ POST /auth/register
+├─ POST /auth/login → JWT token
+└─ Décorateur @require_auth sur endpoints
+
+JOUR 2-3: CHIFFREMENT CREDENTIALS (12h)
+├─ pip install cryptography
+├─ Créer src/secrets.py
+├─ Chiffrer token.json avec Fernet
+├─ Master key = env SECRET_KEY
+└─ Tests chiffrement
+
+JOUR 3-4: PROTECTION INJECTION PROMPT (10h)
+├─ Créer src/sanitizer.py
+├─ Escape special chars
+├─ Max length 5KB
+├─ Détecter patterns injection
+└─ Move prompts to src/prompts/*.txt
+
+JOUR 4-5: VALIDATION INPUT (8h)
+├─ Update Pydantic models:
+│  ├─ sender: EmailStr
+│  ├─ subject: max_length=500
+│  └─ body: max_length=5000
+├─ Add validators
+└─ Test validation
+
+JOUR 5: RATE LIMITING & CONFIG (20h)
+├─ pip install slowapi
+├─ Setup rate limits:
+│  ├─ /emails/process: 10/min
+│  ├─ /emails/run: 5/min
+│  ├─ /reset: 1/min
+│  └─ /emails/history: 100/min
+├─ Créer .env.example
+├─ Créer src/config.py
+└─ Tests rate limiting
+
+JOUR 6: TESTS & REVIEW (10h)
+├─ pytest tests/ -v --cov=src
+├─ 50+ tests passing
+├─ Security audit
+└─ Code review
+
+
+FICHIERS À CRÉER
+════════════════
+
+NEW FILES (9):
+├─ src/auth.py (200 lignes)
+├─ src/sanitizer.py (150 lignes)
+├─ src/secrets.py (100 lignes)
+├─ src/config.py (80 lignes)
+├─ src/prompts/categorize.txt
+├─ src/prompts/generate_response.txt
+├─ tests/test_auth.py (200 lignes)
+├─ tests/test_sanitizer.py (150 lignes)
+├─ tests/test_security.py (100 lignes)
+└─ tests/conftest.py (50 lignes)
+
+.env.example (20 lignes)
+
+
+FICHIERS À MODIFIER
+═══════════════════
+
+src/api.py:
+├─ Import auth, sanitizer, config
+├─ Remove CORS allow_origins=["*"]
+├─ Add @require_auth to endpoints
+├─ Add rate limiting decorators
+├─ Sanitize email inputs
+└─ Use config values
+
+src/processor.py:
+├─ Import config, sanitizer
+├─ Replace hardcoded constants
+├─ Sanitize email text
+└─ Use config values
+
+requirements.txt:
+├─ ADD: python-jose[cryptography]==3.3.0
+├─ ADD: passlib[bcrypt]==1.7.4
+├─ ADD: cryptography==41.0.7
+├─ ADD: slowapi==0.1.9
+├─ ADD: pydantic-settings==2.1.0
+├─ ADD: pytest==7.4.3
+├─ ADD: pytest-asyncio==0.21.1
+├─ ADD: pytest-cov==4.1.0
+└─ ADD: pytest-mock==3.12.0
+
+.gitignore:
+├─ ADD: .env
+├─ ADD: credentials/*.encrypted
+└─ ADD: .pytest_cache/
+
+
+DÉPENDANCES À INSTALLER
+═══════════════════════
+
+pip install python-jose[cryptography]==3.3.0
+pip install passlib[bcrypt]==1.7.4
+pip install cryptography==41.0.7
+pip install slowapi==0.1.9
+pip install pydantic-settings==2.1.0
+pip install pytest==7.4.3
+pip install pytest-asyncio==0.21.1
+pip install pytest-cov==4.1.0
+pip install pytest-mock==3.12.0
+
+
+CHECKLIST PHASE 1
+═════════════════
+
+Authentification:
+  ☐ JWT register endpoint working
+  ☐ JWT login endpoint working
+  ☐ Token verification working
+  ☐ Password hashing working
+  ☐ @require_auth decorator working
+  ☐ RBAC for ADMIN/USER working
+  ☐ /reset protected (ADMIN only)
+
+Chiffrement:
+  ☐ Fernet encryption working
+  ☐ Master key from env SECRET_KEY
+  ☐ token.json chiffré
+  ☐ Decrypt on use working
+  ☐ Migration de token.json ancien
+
+Injection Prompt:
+  ☐ Sanitizer escapes special chars
+  ☐ Max length 5KB enforced
+  ☐ Injection patterns detected
+  ☐ Logs injection attempts
+  ☐ Prompts moved to .txt files
+
+Validation Input:
+  ☐ EmailStr on sender
+  ☐ Max length on subject (500)
+  ☐ Max length on body (5000)
+  ☐ UTF-8 validation
+  ☐ Test bad inputs
+
+Configuration:
+  ☐ .env.example created
+  ☐ python-dotenv loading
+  ☐ All env vars validated
+  ☐ Error if required vars missing
+  ☐ Config used everywhere
+
+Rate Limiting:
+  ☐ slowapi installed
+  ☐ Limits per endpoint
+  ☐ Returns 429 with Retry-After
+  ☐ Track per IP + per user
+  ☐ Test rate limits
+
+CORS:
+  ☐ Not allow_origins=["*"]
+  ☐ Specific domains only
+  ☐ Test CORS headers
+
+Testing:
+  ☐ 10+ auth tests
+  ☐ 10+ sanitizer tests
+  ☐ 5+ security tests
+  ☐ 10+ validation tests
+  ☐ 5+ rate limit tests
+  ☐ 10+ config tests
+  → Total: 50+ tests
+  ☐ All tests passing
+  ☐ Coverage 70%+
+
+
+COMMANDE DE TEST
+════════════════
+
+pytest tests/ -v --cov=src --cov-report=html
+
+
+DÉPLOIEMENT
+═══════════
+
+Before merge to main:
+  ☐ All 50+ tests pass
+  ☐ Code review approved
+  ☐ Coverage > 70%
+  ☐ No security issues
+  ☐ .env.example provided
+  ☐ Documentation updated
+  ☐ No secrets committed
+
+
+RÉSULTAT ATTENDU
+════════════════
+
+✅ Score: 62 → 75 (+13 points)
+✅ Security: 5/10 → 8/10
+✅ 50+ new tests
+✅ All critical vulns fixed
+✅ Ready for staging
+✅ Production path clear
+
+
+NEXT PHASE
+══════════
+
+After Phase 1 approved:
+→ Phase 2: Core Improvements (85h, 1 week)
+→ Phase 3: Polish + Tests (75h, 1 week)
+→ Phase 4: Excellence (45h, 1-2 weeks)
+
+Final result: 100/100 ✅
+
+
+════════════════════════════════════════════════════════════════════════════════
+
+                        START NOW! 🚀
+
+1. Créer branch: git checkout -b feature/security-phase1
+2. Créer dossier: mkdir -p tests/ src/prompts/
+3. Créer fichiers énumérés ci-dessus
+4. Installer dépendances: pip install -r requirements.txt
+5. Écrire tests
+6. Implémenter features
+7. Run: pytest tests/ -v --cov=src
+8. Code review
+9. Merge!
+
+════════════════════════════════════════════════════════════════════════════════
