@@ -17,6 +17,7 @@ from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from sqlalchemy.orm import Session
 
 from database import get_db, create_user, get_user_by_email, update_last_login
+from config import settings
 
 load_dotenv()
 
@@ -25,7 +26,7 @@ security    = HTTPBearer()
 
 ALGORITHM                 = os.getenv("JWT_ALGORITHM", "HS256")
 ACCESS_TOKEN_EXPIRE_HOURS = int(os.getenv("JWT_EXPIRY_HOURS", "24"))
-SECRET_KEY                = os.getenv("JWT_SECRET", "fallback-dev-secret-change-in-production")
+SECRET_KEY                = settings.JWT_SECRET
 
 
 class TokenData(BaseModel):
