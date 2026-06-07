@@ -155,9 +155,13 @@ class EmailProcessor:
             response_docs    = self._query_chroma(vector, where={"category": category})
             record["response"] = self._generate_response(full_text, category, response_docs, detection)
 
-            # 7. Envoi conditionnel
-            if send_reply and confidence >= CONFIDENCE_THRESHOLD and record["response"]:
-                record["sent"] = self._send_reply(email_id, sender, subject, record["response"])
+            # 7. Mise en attente de validation humaine (envoi via /emails/{id}/approve)
+            if record["response"] and confidence >= CONFIDENCE_THRESHOLD:
+                record["suggested_reply"] = record["response"]
+                record["status"] = "pending_review"
+                logger.info(f"Email {email_id} mis en attente de validation humaine")
+            else:
+                record["status"] = "no_reply_needed"
 
             # 8. Indexation ChromaDB
             self._index_email(email_id, full_text, vector, category, sender, subject)
@@ -176,6 +180,8 @@ class EmailProcessor:
 
     @staticmethod
     def _should_mark_read(record: dict) -> bool:
+        if record.get("status") == "pending_review":
+            return False
         err = record.get("error")
         if err is None:
             return True

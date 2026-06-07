@@ -105,6 +105,34 @@ class Storage:
             "by_urgency":     by_urg,
         }
 
+    def get_pending(self) -> list:
+        """Retourne tous les emails avec status='pending_review'."""
+        with self._lock:
+            return [e for e in self._data["emails"] if e.get("status") == "pending_review"]
+
+    def update_status(
+        self,
+        email_id: str,
+        status: str,
+        reviewer: str = None,
+        rejection_reason: str = None,
+    ) -> bool:
+        """Met à jour le statut d'un email. Retourne False si email introuvable."""
+        with self._lock:
+            for email in self._data["emails"]:
+                if email.get("id") == email_id:
+                    email["status"] = status
+                    if status == "sent":
+                        email["sent"] = True
+                    if reviewer:
+                        email["reviewed_by"] = reviewer
+                        email["reviewed_at"] = self._now()
+                    if rejection_reason:
+                        email["rejection_reason"] = rejection_reason
+                    self._save()
+                    return True
+            return False
+
     def reset(self) -> None:
         with self._lock:
             self._data = {"emails": [], "meta": {"created_at": self._now(), "last_updated": self._now(), "total": 0}}

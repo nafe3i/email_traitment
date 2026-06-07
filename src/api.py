@@ -330,6 +330,90 @@ def get_history(
     return {"total": len(emails), "emails": emails[:limit]}
 
 
+@app.get("/emails/pending", tags=["Emails"])
+def get_pending_emails(current_user: User = Depends(get_current_user)):
+    """Liste les emails en attente de validation humaine."""
+    if current_user.role not in ("admin", "user"):
+        raise HTTPException(status_code=403, detail="Accès refusé")
+    return _get_storage().get_pending()
+
+
+@app.post("/emails/{email_id}/approve", tags=["Emails"])
+def approve_email(email_id: str, current_user: User = Depends(get_current_user)):
+    """Approuve la réponse générée et l'envoie via Gmail."""
+    if current_user.role not in ("admin", "user"):
+        raise HTTPException(status_code=403, detail="Accès refusé")
+
+    storage = _get_storage()
+    email = storage.get_by_id(email_id)
+
+    if not email:
+        raise HTTPException(status_code=404, detail="Email introuvable")
+    if email.get("status") != "pending_review":
+        raise HTTPException(status_code=400, detail=f"Statut invalide : {email.get('status')}")
+    if not email.get("suggested_reply"):
+        raise HTTPException(status_code=400, detail="Aucune réponse générée pour cet email")
+
+    gmail = get_processor().gmail
+    if not gmail:
+        try:
+            from gmail_service import get_gmail_service
+            gmail = get_gmail_service()
+        except Exception:
+            gmail = None
+
+    if gmail:
+        try:
+            proc = EmailProcessor(gmail_service=gmail, storage=storage)
+            sent = proc._send_reply(
+                email_id,
+                email["sender"],
+                email["subject"],
+                email["suggested_reply"],
+            )
+            if not sent:
+                raise HTTPException(status_code=500, detail="Erreur envoi Gmail")
+            storage.update_status(email_id, "sent", reviewer=current_user.email)
+            from gmail_service import mark_email_as_read
+            mark_email_as_read(gmail, email_id)
+            return {"status": "sent", "email_id": email_id, "approved_by": current_user.email}
+        except HTTPException:
+            raise
+        except Exception as e:
+            logger.error(f"Erreur envoi Gmail pour {email_id}: {e}")
+            raise HTTPException(status_code=500, detail=f"Erreur envoi Gmail : {str(e)}")
+    else:
+        storage.update_status(email_id, "approved_no_gmail", reviewer=current_user.email)
+        return {"status": "approved_no_gmail", "email_id": email_id, "approved_by": current_user.email}
+
+
+@app.post("/emails/{email_id}/reject", tags=["Emails"])
+def reject_email(
+    email_id: str,
+    current_user: User = Depends(get_current_user),
+    reason: str = "",
+):
+    """Rejette la réponse générée — aucun email envoyé."""
+    if current_user.role not in ("admin", "user"):
+        raise HTTPException(status_code=403, detail="Accès refusé")
+
+    storage = _get_storage()
+    email = storage.get_by_id(email_id)
+
+    if not email:
+        raise HTTPException(status_code=404, detail="Email introuvable")
+    if email.get("status") != "pending_review":
+        raise HTTPException(status_code=400, detail=f"Statut invalide : {email.get('status')}")
+
+    storage.update_status(
+        email_id,
+        "rejected",
+        reviewer=current_user.email,
+        rejection_reason=reason or None,
+    )
+    return {"status": "rejected", "email_id": email_id, "rejected_by": current_user.email}
+
+
 @app.get("/emails/{email_id}", tags=["Emails"])
 def get_email(email_id: str, current_user: User = Depends(get_current_user)):
     """Retourne le detail d un email traite par son ID."""
