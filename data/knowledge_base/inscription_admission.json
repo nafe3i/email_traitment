@@ -1,0 +1,92 @@
+[
+  {
+    "id": "ins_001",
+    "category": "inscription_admission",
+    "language": "fr",
+    "question": "Comment puis-je m'inscrire à AUI pour la rentrée prochaine ?",
+    "answer": "Pour vous inscrire à Al Akhawayn University, vous devez soumettre votre dossier de candidature en ligne sur le portail admissions.aui.ma. Le dossier comprend : relevés de notes du baccalauréat, lettre de motivation, copie du CIN/passeport, et les frais de dossier. Les dates limites varient selon le cycle d'études.",
+    "tags": ["inscription", "admission", "candidature", "dossier"],
+    "validated": true
+  },
+  {
+    "id": "ins_002",
+    "category": "inscription_admission",
+    "language": "en",
+    "question": "How do I apply to AUI as an international student?",
+    "answer": "International students can apply through the AUI admissions portal at admissions.aui.ma. Required documents include: official transcripts, copy of passport, motivation letter, and language proficiency proof (TOEFL/IELTS for English programs). The Admissions Office can be reached at admissions@aui.ma or +212 535 862 000.",
+    "tags": ["international", "apply", "admission", "documents"],
+    "validated": true
+  },
+  {
+    "id": "ins_003",
+    "category": "inscription_admission",
+    "language": "fr",
+    "question": "Comment procéder à ma réinscription pour le semestre prochain ?",
+    "answer": "La réinscription se fait via votre portail MyAUI. Connectez-vous, allez dans 'Réinscription', vérifiez vos informations, réglez les frais de scolarité, puis confirmez votre inscription. La réinscription doit être complétée avant la date limite affichée sur MyAUI, généralement 3 semaines avant le début du semestre.",
+    "tags": ["réinscription", "semestre", "myaui", "frais"],
+    "validated": true
+  },
+  {
+    "id": "ins_004",
+    "category": "inscription_admission",
+    "language": "fr",
+    "question": "Je souhaite effectuer un transfert depuis une autre université. Comment faire ?",
+    "answer": "Les transferts sont acceptés sous conditions d'équivalence de crédits. Soumettez une demande de transfert avec vos relevés de notes officiels, le programme de votre université actuelle, et une lettre de motivation. Le comité académique évaluera les équivalences. Contactez le Bureau des Admissions : admissions@aui.ma.",
+    "tags": ["transfert", "équivalence", "crédits", "admission"],
+    "validated": true
+  },
+  {
+    "id": "ins_005",
+    "category": "inscription_admission",
+    "language": "en",
+    "question": "What are the admission requirements for the MBA program?",
+    "answer": "AUI's MBA program requires: undergraduate degree (any field), minimum 2 years work experience, GMAT or GRE scores, two recommendation letters, statement of purpose, and English proficiency proof. The program is accredited and taught entirely in English. Applications are reviewed on a rolling basis.",
+    "tags": ["mba", "graduate", "admission", "gmat"],
+    "validated": true
+  },
+  {
+    "id": "ins_006",
+    "category": "inscription_admission",
+    "language": "fr",
+    "question": "Quand sont les résultats d'admission pour la licence ?",
+    "answer": "Les résultats d'admission pour les programmes de licence sont communiqués par email et disponibles sur le portail admissions.aui.ma dans les 3 à 4 semaines suivant la clôture des dossiers. Pour le semestre d'automne, les résultats sont généralement disponibles en juin-juillet.",
+    "tags": ["résultats", "admission", "licence", "notification"],
+    "validated": true
+  },
+  {
+    "id": "ins_007",
+    "category": "inscription_admission",
+    "language": "fr",
+    "question": "Puis-je visiter le campus avant de soumettre ma candidature ?",
+    "answer": "Oui, AUI organise des journées portes ouvertes régulièrement. Vous pouvez aussi planifier une visite individuelle du campus en contactant le Bureau des Admissions. La visite inclut une présentation de l'université, une visite des installations (résidences, LRC, labs) et une rencontre avec des étudiants actuels.",
+    "tags": ["visite", "campus", "portes ouvertes", "admission"],
+    "validated": true
+  },
+  {
+    "id": "ins_008",
+    "category": "inscription_admission",
+    "language": "en",
+    "question": "Is there an age limit to apply to AUI?",
+    "answer": "There is no age limit for admission to AUI. We welcome applications from all qualified candidates regardless of age. Adult learners and working professionals are especially encouraged to apply for our evening and online programs. Contact admissions@aui.ma for programs tailored to your profile.",
+    "tags": ["age", "adult learner", "admission", "eligibility"],
+    "validated": true
+  },
+  {
+    "id": "ins_009",
+    "category": "inscription_admission",
+    "language": "fr",
+    "question": "Comment obtenir une attestation d'inscription ?",
+    "answer": "L'attestation d'inscription est disponible en ligne sur votre portail MyAUI dans la section 'Documents administratifs'. Vous pouvez la télécharger et l'imprimer directement. Pour une version officielle avec cachet de l'université, rendez-vous à la Scolarité avec votre carte étudiante.",
+    "tags": ["attestation", "inscription", "document", "scolarité"],
+    "validated": true
+  },
+  {
+    "id": "ins_010",
+    "category": "inscription_admission",
+    "language": "fr",
+    "question": "Quels sont les délais pour finaliser mon inscription après acceptation ?",
+    "answer": "Après réception de votre lettre d'acceptation, vous disposez de 15 jours calendaires pour confirmer votre inscription en versant l'acompte requis. Passé ce délai, votre place pourrait être attribuée à un autre candidat. Contactez le Bureau des Admissions si vous avez besoin d'une extension.",
+    "tags": ["délai", "confirmation", "inscription", "acompte"],
+    "validated": true
+  }
+]

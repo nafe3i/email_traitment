@@ -1,0 +1,92 @@
+[
+  {
+    "id": "lib_001",
+    "category": "bibliotheque",
+    "language": "fr",
+    "question": "Quels sont les horaires d'ouverture de la bibliothèque LRC ?",
+    "answer": "Le Learning Resource Center (LRC) d'AUI est ouvert : Lundi-Jeudi 8h-24h, Vendredi 8h-12h et 14h-24h, Samedi 10h-22h, Dimanche 12h-24h. Pendant la période des examens, le LRC est ouvert 24h/24 et 7j/7. L'accès est réservé aux membres de la communauté AUI avec une carte valide.",
+    "tags": ["bibliothèque", "LRC", "horaires", "ouverture"],
+    "validated": true
+  },
+  {
+    "id": "lib_002",
+    "category": "bibliotheque",
+    "language": "fr",
+    "question": "Comment emprunter un livre à la bibliothèque AUI ?",
+    "answer": "Pour emprunter un livre au LRC : présentez votre carte étudiante AUI au comptoir de prêt. Les étudiants peuvent emprunter jusqu'à 5 livres pour une durée de 14 jours (renouvelable 2 fois en ligne sur library.aui.ma). Les manuels réservés pour les cours ont un prêt limité à 2 heures. Des pénalités s'appliquent pour les retards (2 MAD/jour/livre).",
+    "tags": ["emprunt", "livre", "prêt", "bibliothèque"],
+    "validated": true
+  },
+  {
+    "id": "lib_003",
+    "category": "bibliotheque",
+    "language": "fr",
+    "question": "Comment accéder aux bases de données académiques depuis chez moi ?",
+    "answer": "Les bases de données académiques (JSTOR, Springer, IEEE Xplore, etc.) sont accessibles hors campus via le VPN AUI. Connectez-vous à vpn.aui.ma, puis accédez à library.aui.ma > Databases. Vous pouvez aussi accéder directement via EZProxy avec vos identifiants AUI sur les liens fournis par la bibliothèque.",
+    "tags": ["base de données", "JSTOR", "accès distant", "VPN"],
+    "validated": true
+  },
+  {
+    "id": "lib_004",
+    "category": "bibliotheque",
+    "language": "en",
+    "question": "How do I reserve a study room at the LRC?",
+    "answer": "Study rooms at the LRC can be reserved online through library.aui.ma > Room Reservations or via the LibCal app. Reservations can be made up to 7 days in advance for a maximum of 3 hours per day. Groups of 2 to 8 students can book group study rooms. Individual study carrels are available on a first-come basis. Cancellations must be made at least 1 hour before.",
+    "tags": ["study room", "reservation", "group study", "LRC"],
+    "validated": true
+  },
+  {
+    "id": "lib_005",
+    "category": "bibliotheque",
+    "language": "fr",
+    "question": "Comment renouveler un emprunt de livre en ligne ?",
+    "answer": "Renouvelez vos emprunts via library.aui.ma > Mon compte > Emprunts en cours, puis cliquez sur 'Renouveler'. Le renouvellement est possible 2 fois maximum si le livre n'est pas réservé par un autre étudiant. Vous recevez un rappel par email 3 jours avant l'échéance. Les livres réservés par d'autres ne peuvent pas être renouvelés.",
+    "tags": ["renouvellement", "emprunt", "livre", "en ligne"],
+    "validated": true
+  },
+  {
+    "id": "lib_006",
+    "category": "bibliotheque",
+    "language": "fr",
+    "question": "La bibliothèque propose-t-elle de l'aide pour la rédaction de travaux académiques ?",
+    "answer": "Oui, le LRC offre plusieurs services d'aide à la recherche et à la rédaction : sessions de formation à la recherche documentaire (sur inscription), des bibliothécaires de référence disponibles pendant les heures d'ouverture, un service de citation (APA, MLA, Chicago), et l'accès au logiciel anti-plagiat Turnitin via votre portail Moodle.",
+    "tags": ["aide", "rédaction", "recherche", "Turnitin"],
+    "validated": true
+  },
+  {
+    "id": "lib_007",
+    "category": "bibliotheque",
+    "language": "en",
+    "question": "How can I access theses and dissertations from AUI alumni?",
+    "answer": "AUI theses and dissertations are available through the Institutional Repository on library.aui.ma > Research > Theses & Dissertations. Most are available in full text. For restricted theses, you can request access through the librarian. International theses can be accessed through ProQuest Dissertations & Theses, available to AUI students via the library databases.",
+    "tags": ["thesis", "dissertation", "research", "repository"],
+    "validated": true
+  },
+  {
+    "id": "lib_008",
+    "category": "bibliotheque",
+    "language": "fr",
+    "question": "Puis-je imprimer ou scanner des documents à la bibliothèque ?",
+    "answer": "Le LRC dispose de scanners et imprimantes en libre-service disponibles 24h/24 pendant les heures d'ouverture. L'impression utilise votre quota PaperCut (rechargeable à la bibliothèque ou en ligne). Les scanners permettent d'envoyer des documents directement par email gratuitement. Des ordinateurs en accès libre sont également disponibles.",
+    "tags": ["impression", "scanner", "photocopie", "LRC"],
+    "validated": true
+  },
+  {
+    "id": "lib_009",
+    "category": "bibliotheque",
+    "language": "fr",
+    "question": "Comment faire une suggestion d'achat de livre pour la bibliothèque ?",
+    "answer": "Vous pouvez suggérer l'achat d'un livre ou d'une ressource pour le LRC via library.aui.ma > Suggestions d'achat. Remplissez le formulaire avec le titre, l'auteur, l'ISBN et la justification académique. Les suggestions sont examinées par les bibliothécaires et les responsables de département. La réponse est donnée sous 10 jours ouvrés.",
+    "tags": ["suggestion", "achat", "livre", "acquisition"],
+    "validated": true
+  },
+  {
+    "id": "lib_010",
+    "category": "bibliotheque",
+    "language": "en",
+    "question": "I lost a borrowed book. What should I do?",
+    "answer": "If you lose a borrowed book, report it immediately to the LRC Circulation Desk or email library@aui.ma. You will be required to pay the replacement cost (current market price + 20 MAD processing fee) or provide an identical replacement copy. Until the book is paid for or replaced, your library account is suspended. Contact the library as soon as possible to minimize fines.",
+    "tags": ["lost book", "fine", "replacement", "library account"],
+    "validated": true
+  }
+]

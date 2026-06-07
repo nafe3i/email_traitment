@@ -1,0 +1,92 @@
+[
+  {
+    "id": "sco_001",
+    "category": "scolarite_frais",
+    "language": "fr",
+    "question": "Quels sont les frais de scolarité pour cette année académique ?",
+    "answer": "Les frais de scolarité d'AUI varient selon le programme. Pour la licence, les frais sont d'environ 47 000 MAD par semestre. Des frais additionnels (résidence, repas, activités) s'appliquent séparément. Consultez le détail complet sur student.aui.ma ou contactez la Scolarité : scolarite@aui.ma.",
+    "tags": ["frais", "scolarité", "tarif", "coût"],
+    "validated": true
+  },
+  {
+    "id": "sco_002",
+    "category": "scolarite_frais",
+    "language": "fr",
+    "question": "Comment puis-je régler mes frais de scolarité ?",
+    "answer": "Le paiement des frais de scolarité peut se faire par : virement bancaire (RIB disponible sur MyAUI), chèque certifié à l'ordre d'AUI, ou paiement en espèces à la caisse de l'université. Un plan de paiement échelonné est disponible sur demande. Contactez finance@aui.ma pour les détails.",
+    "tags": ["paiement", "frais", "virement", "caisse"],
+    "validated": true
+  },
+  {
+    "id": "sco_003",
+    "category": "scolarite_frais",
+    "language": "fr",
+    "question": "Comment faire une demande de bourse d'études à AUI ?",
+    "answer": "AUI propose plusieurs bourses : mérite académique, besoins financiers, et bourses spécifiques par programme. Pour postuler, connectez-vous à MyAUI > Aide Financière > Demande de bourse. Joignez les justificatifs de revenus familiaux et votre relevé de notes. Les demandes sont traitées chaque semestre.",
+    "tags": ["bourse", "aide financière", "mérite", "demande"],
+    "validated": true
+  },
+  {
+    "id": "sco_004",
+    "category": "scolarite_frais",
+    "language": "en",
+    "question": "I need a scholarship or financial aid. What options are available?",
+    "answer": "AUI offers several financial aid options: merit-based scholarships (for academic excellence), need-based grants, partial tuition waivers, and work-study programs. To apply, log in to MyAUI > Financial Aid > Apply. Deadline is typically 6 weeks before semester start. Contact finaid@aui.ma for guidance.",
+    "tags": ["scholarship", "financial aid", "grant", "work-study"],
+    "validated": true
+  },
+  {
+    "id": "sco_005",
+    "category": "scolarite_frais",
+    "language": "fr",
+    "question": "Je n'ai pas pu payer mes frais avant la date limite. Que faire ?",
+    "answer": "Si vous ne pouvez pas respecter la date limite de paiement, contactez immédiatement le Service Financier à finance@aui.ma AVANT l'échéance. Des arrangements peuvent être faits (délai de grâce, plan de paiement). Un retard non justifié peut entraîner une suspension d'accès aux services académiques.",
+    "tags": ["retard", "paiement", "délai", "arrangement"],
+    "validated": true
+  },
+  {
+    "id": "sco_006",
+    "category": "scolarite_frais",
+    "language": "fr",
+    "question": "Comment obtenir une quittance ou un reçu de paiement de frais ?",
+    "answer": "Vos reçus de paiement sont disponibles directement sur votre portail MyAUI dans la section 'Finances > Historique des paiements'. Vous pouvez les télécharger en PDF. Pour un document officiel avec cachet universitaire, rendez-vous à la Scolarité avec votre carte étudiante.",
+    "tags": ["reçu", "quittance", "paiement", "document"],
+    "validated": true
+  },
+  {
+    "id": "sco_007",
+    "category": "scolarite_frais",
+    "language": "en",
+    "question": "Are there payment plans available for tuition fees?",
+    "answer": "Yes, AUI offers installment payment plans. You can split the semester fees into 2 or 3 installments. A formal request must be submitted to the Finance Office (finance@aui.ma) before the payment deadline, with a signed agreement. A small administrative fee may apply. Students on financial aid may qualify automatically.",
+    "tags": ["installment", "payment plan", "tuition", "split"],
+    "validated": true
+  },
+  {
+    "id": "sco_008",
+    "category": "scolarite_frais",
+    "language": "fr",
+    "question": "Est-ce que les frais de scolarité couvrent aussi le logement et les repas ?",
+    "answer": "Non, les frais de scolarité couvrent uniquement les cours et les services académiques. Le logement en résidence universitaire et les repas à la cantine sont facturés séparément. Contactez le Bureau de la Vie Étudiante pour les tarifs résidence et restauration : vie.campus@aui.ma.",
+    "tags": ["frais", "logement", "repas", "résidence"],
+    "validated": true
+  },
+  {
+    "id": "sco_009",
+    "category": "scolarite_frais",
+    "language": "fr",
+    "question": "Ma bourse n'a pas été créditée ce semestre. Que faire ?",
+    "answer": "Si votre bourse n'apparaît pas sur votre compte MyAUI en début de semestre, contactez le Bureau d'Aide Financière à finaid@aui.ma avec : votre numéro étudiant, le nom de la bourse attendue, et les documents de votre dossier. Les délais de traitement peuvent prendre 5 à 10 jours ouvrés.",
+    "tags": ["bourse", "crédit", "problème", "aide financière"],
+    "validated": true
+  },
+  {
+    "id": "sco_010",
+    "category": "scolarite_frais",
+    "language": "fr",
+    "question": "Quels sont les frais pour un semestre d'échange à AUI ?",
+    "answer": "Les étudiants en échange (incoming) bénéficient de frais réduits selon les accords bilatéraux entre AUI et leur université d'origine. En général, ils paient à leur propre université et AUI accueille par réciprocité. Contactez le Bureau des Relations Internationales : international@aui.ma pour les détails.",
+    "tags": ["échange", "frais", "international", "accord"],
+    "validated": true
+  }
+]

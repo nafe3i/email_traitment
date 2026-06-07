@@ -1,0 +1,92 @@
+[
+  {
+    "id": "vc_001",
+    "category": "vie_campus",
+    "language": "fr",
+    "question": "Comment réserver une chambre en résidence universitaire ?",
+    "answer": "Les résidences universitaires sont gérées par le Bureau de la Vie Étudiante. Pour réserver, connectez-vous à MyAUI > Résidence > Demande de logement. Les chambres sont attribuées selon disponibilité et ordre de demande. Les demandes doivent être soumises au moins 4 semaines avant le début du semestre. Contact : housing@aui.ma.",
+    "tags": ["résidence", "chambre", "logement", "réservation"],
+    "validated": true
+  },
+  {
+    "id": "vc_002",
+    "category": "vie_campus",
+    "language": "fr",
+    "question": "Quels sont les horaires de la cantine universitaire ?",
+    "answer": "La cantine principale (Al Khawarizmi Cafeteria) est ouverte : Petit-déjeuner 7h-9h30, Déjeuner 12h-14h30, Dîner 18h-20h30. Le week-end les horaires sont réduits. Des options végétariennes et halal sont toujours disponibles. Le solde repas est géré via votre carte étudiante rechargeable.",
+    "tags": ["cantine", "horaires", "repas", "cafétéria"],
+    "validated": true
+  },
+  {
+    "id": "vc_003",
+    "category": "vie_campus",
+    "language": "fr",
+    "question": "Quels clubs et associations étudiantes existe-t-il à AUI ?",
+    "answer": "AUI compte plus de 40 clubs étudiants actifs : clubs académiques (Debate Club, IEEE, Model UN), sportifs (football, basketball, tennis), culturels (Arabic Club, French Club), entrepreneuriat (Enactus, Junior Enterprise). Pour rejoindre un club ou en créer un nouveau, contactez le Bureau de la Vie Étudiante : sve@aui.ma.",
+    "tags": ["clubs", "associations", "activités", "vie étudiante"],
+    "validated": true
+  },
+  {
+    "id": "vc_004",
+    "category": "vie_campus",
+    "language": "en",
+    "question": "What sports facilities are available on campus?",
+    "answer": "AUI has excellent sports facilities including: Olympic-size swimming pool, tennis courts (4), football field, basketball courts, fitness center/gym, volleyball courts, and a running track. Facilities are open to all students with a valid AUI card. Some facilities require advance booking through the Sports Department: sports@aui.ma.",
+    "tags": ["sports", "gym", "facilities", "swimming pool"],
+    "validated": true
+  },
+  {
+    "id": "vc_005",
+    "category": "vie_campus",
+    "language": "fr",
+    "question": "Comment signaler un problème de maintenance dans ma résidence ?",
+    "answer": "Pour signaler un problème de maintenance (plomberie, électricité, climatisation, etc.) dans votre chambre de résidence, soumettez un ticket via MyAUI > Vie Campus > Maintenance, ou appelez le bureau de maintenance directement au numéro affiché dans votre résidence. Les problèmes urgents (inondation, panne électrique) doivent être signalés immédiatement à la sécurité du campus.",
+    "tags": ["maintenance", "résidence", "problème", "réparation"],
+    "validated": true
+  },
+  {
+    "id": "vc_006",
+    "category": "vie_campus",
+    "language": "fr",
+    "question": "Y a-t-il un service médical sur le campus ?",
+    "answer": "Oui, AUI dispose d'une infirmerie sur le campus ouverte du lundi au vendredi de 8h à 18h et le samedi de 9h à 13h. Pour les soins d'urgence en dehors de ces heures, un protocole d'urgence est disponible (numéro affiché dans les résidences). L'infirmerie offre des consultations médicales de base, des premiers soins, et peut référer vers des médecins spécialistes.",
+    "tags": ["médical", "infirmerie", "santé", "urgence"],
+    "validated": true
+  },
+  {
+    "id": "vc_007",
+    "category": "vie_campus",
+    "language": "en",
+    "question": "Can I have guests stay in my dormitory room?",
+    "answer": "Guest stays in dormitories must be approved in advance by the Housing Office. Short-term day visits are permitted during defined hours (9am-10pm). Overnight stays require a formal guest request submitted 48 hours in advance. Guests must be registered at the security gate and their AUI host is responsible for their behavior on campus.",
+    "tags": ["guests", "dormitory", "overnight", "housing policy"],
+    "validated": true
+  },
+  {
+    "id": "vc_008",
+    "category": "vie_campus",
+    "language": "fr",
+    "question": "Est-ce qu'il y a un service de transport entre le campus et la ville d'Ifrane ?",
+    "answer": "AUI propose un service de navette régulier entre le campus et le centre-ville d'Ifrane ainsi que vers Meknès et Fès. Les horaires sont affichés à l'entrée principale et sur MyAUI > Services > Transport. Des taxis collectifs desservent également le campus régulièrement. Renseignez-vous auprès du Bureau de la Vie Étudiante pour les détails.",
+    "tags": ["transport", "navette", "ifrane", "déplacement"],
+    "validated": true
+  },
+  {
+    "id": "vc_009",
+    "category": "vie_campus",
+    "language": "fr",
+    "question": "Comment organiser un événement ou une activité sur le campus ?",
+    "answer": "Pour organiser un événement sur le campus, soumettez une demande d'autorisation au Bureau de la Vie Étudiante au moins 2 semaines avant la date. Le formulaire est disponible sur MyAUI > Clubs & Événements > Planifier un événement. Indiquez la date, le lieu, le nombre de participants attendus et le type d'activité. La réservation de salles se fait via le même portail.",
+    "tags": ["événement", "organisation", "salle", "activité"],
+    "validated": true
+  },
+  {
+    "id": "vc_010",
+    "category": "vie_campus",
+    "language": "en",
+    "question": "Is there a prayer room on campus?",
+    "answer": "Yes, AUI has a mosque on campus that is open for all five daily prayers. It is accessible to all Muslim students, staff, and visitors. The prayer schedule follows local Ifrane prayer times. There is also a quiet reflection room available for students of all faiths. Location: near the main cafeteria building.",
+    "tags": ["mosque", "prayer", "religion", "quiet room"],
+    "validated": true
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "it_001",
+    "category": "it_portail",
+    "language": "fr",
+    "question": "Je n'arrive pas à me connecter à MyAUI. Que faire ?",
+    "answer": "Si vous ne pouvez pas vous connecter à MyAUI : 1) Vérifiez vos identifiants (prenom.nom@aui.ma + mot de passe initial). 2) Si mot de passe oublié, cliquez sur 'Mot de passe oublié' sur la page de connexion. 3) Si le problème persiste, contactez le Help Desk IT : helpdesk@aui.ma ou +212 535 862 000 ext. IT.",
+    "tags": ["myaui", "connexion", "mot de passe", "portail"],
+    "validated": true
+  },
+  {
+    "id": "it_002",
+    "category": "it_portail",
+    "language": "fr",
+    "question": "Comment activer mon email universitaire AUI ?",
+    "answer": "Votre email universitaire (prenom.nom@aui.ma) est créé automatiquement lors de votre inscription. Pour l'activer, connectez-vous à mail.aui.ma avec vos identifiants MyAUI. Si vous n'avez pas reçu vos identifiants, contactez le Help Desk IT à helpdesk@aui.ma avec votre numéro étudiant.",
+    "tags": ["email", "universitaire", "activation", "aui.ma"],
+    "validated": true
+  },
+  {
+    "id": "it_003",
+    "category": "it_portail",
+    "language": "fr",
+    "question": "Comment me connecter au Wi-Fi du campus ?",
+    "answer": "Connectez-vous au réseau Wi-Fi 'AUI-Student' avec vos identifiants MyAUI (email universitaire + mot de passe). Si la connexion échoue, votre compte IT a peut-être expiré : contactez helpdesk@aui.ma. Le Wi-Fi couvre l'ensemble du campus incluant les résidences, la bibliothèque et les salles de classe.",
+    "tags": ["wifi", "réseau", "campus", "connexion"],
+    "validated": true
+  },
+  {
+    "id": "it_004",
+    "category": "it_portail",
+    "language": "en",
+    "question": "How do I reset my MyAUI password?",
+    "answer": "To reset your MyAUI password: Go to myaui.ma and click 'Forgot Password'. Enter your AUI email (firstname.lastname@aui.ma). You'll receive a reset link by email within 5 minutes. If you don't receive the email, check your spam folder or contact IT Help Desk at helpdesk@aui.ma with your student ID.",
+    "tags": ["password", "reset", "myaui", "login"],
+    "validated": true
+  },
+  {
+    "id": "it_005",
+    "category": "it_portail",
+    "language": "fr",
+    "question": "Je n'arrive pas à accéder à Moodle ou aux cours en ligne. Que faire ?",
+    "answer": "Moodle est accessible à moodle.aui.ma avec les mêmes identifiants que MyAUI. Si vous n'avez pas accès à un cours, il est possible que votre inscription ne soit pas encore synchronisée (délai de 24h). Contactez votre professeur ou le Help Desk IT : helpdesk@aui.ma.",
+    "tags": ["moodle", "cours en ligne", "accès", "LMS"],
+    "validated": true
+  },
+  {
+    "id": "it_006",
+    "category": "it_portail",
+    "language": "fr",
+    "question": "Comment imprimer sur les imprimantes du campus ?",
+    "answer": "Les imprimantes du campus sont accessibles via le système PaperCut. Connectez-vous à print.aui.ma pour gérer votre quota d'impression. Vous pouvez imprimer depuis votre ordinateur personnel en installant les pilotes d'impression AUI, disponibles sur it.aui.ma > Downloads. Un crédit d'impression mensuel est offert à chaque étudiant.",
+    "tags": ["impression", "imprimante", "papercut", "quota"],
+    "validated": true
+  },
+  {
+    "id": "it_007",
+    "category": "it_portail",
+    "language": "en",
+    "question": "I accidentally deleted important files from my AUI OneDrive. Can I recover them?",
+    "answer": "Files deleted from AUI OneDrive go to the Recycle Bin and can be recovered within 93 days. Log in to your AUI Microsoft 365 account, go to OneDrive, and click 'Recycle Bin' on the left sidebar. Select the files and click 'Restore'. For permanent deletions beyond 93 days, contact the IT Help Desk immediately — recovery may still be possible from backups.",
+    "tags": ["onedrive", "recovery", "deleted", "backup"],
+    "validated": true
+  },
+  {
+    "id": "it_008",
+    "category": "it_portail",
+    "language": "fr",
+    "question": "Comment installer le logiciel Office 365 gratuitement en tant qu'étudiant AUI ?",
+    "answer": "En tant qu'étudiant AUI, vous avez accès gratuitement à Microsoft Office 365 (Word, Excel, PowerPoint, Teams, etc.). Connectez-vous à office.aui.ma avec votre email universitaire, puis téléchargez les applications sur jusqu'à 5 appareils. La licence est valide pendant toute votre scolarité à AUI.",
+    "tags": ["office 365", "microsoft", "logiciel", "gratuit"],
+    "validated": true
+  },
+  {
+    "id": "it_009",
+    "category": "it_portail",
+    "language": "fr",
+    "question": "Ma carte étudiante ne fonctionne plus pour accéder aux bâtiments. Que faire ?",
+    "answer": "Si votre carte étudiante ne fonctionne plus pour l'accès aux bâtiments, rendez-vous au Bureau de Sécurité du campus pour vérification. Il peut s'agir d'une désactivation suite à une inscription incomplète ou un problème de paiement. Le Help Desk IT peut également vérifier les droits d'accès : helpdesk@aui.ma.",
+    "tags": ["carte étudiante", "accès", "bâtiment", "sécurité"],
+    "validated": true
+  },
+  {
+    "id": "it_010",
+    "category": "it_portail",
+    "language": "en",
+    "question": "How do I connect to the AUI VPN when off campus?",
+    "answer": "AUI provides a VPN service for off-campus access to library resources and internal systems. Download the Cisco AnyConnect client from it.aui.ma > VPN. Connect to vpn.aui.ma using your AUI credentials. The VPN gives you access to licensed databases, restricted research tools, and administrative systems from anywhere.",
+    "tags": ["vpn", "off-campus", "cisco", "remote access"],
+    "validated": true
+  }
+]

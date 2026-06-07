@@ -1,0 +1,92 @@
+[
+  {
+    "id": "stg_001",
+    "category": "stage_carriere",
+    "language": "fr",
+    "question": "Comment trouver un stage via l'université AUI ?",
+    "answer": "Le Career Center d'AUI vous aide à trouver des stages via sa plateforme en ligne career.aui.ma, où les entreprises partenaires publient leurs offres. Inscrivez-vous, créez votre profil, et postulez directement. Le Career Center organise aussi des foires à l'emploi (Career Fair) chaque semestre. Contact : careercenter@aui.ma.",
+    "tags": ["stage", "emploi", "Career Center", "offre"],
+    "validated": true
+  },
+  {
+    "id": "stg_002",
+    "category": "stage_carriere",
+    "language": "fr",
+    "question": "Comment obtenir une lettre de recommandation d'un professeur ?",
+    "answer": "Pour demander une lettre de recommandation : contactez le professeur par email au moins 3 semaines avant la date limite. Fournissez : votre CV, la description du poste/programme visé, les cours suivis avec lui/elle, et vos notes. Plus vous lui donnez de contexte, meilleure sera la lettre. Confirmez par un rappel une semaine avant l'échéance.",
+    "tags": ["recommandation", "lettre", "professeur", "référence"],
+    "validated": true
+  },
+  {
+    "id": "stg_003",
+    "category": "stage_carriere",
+    "language": "fr",
+    "question": "La convention de stage doit-elle être signée par l'université ?",
+    "answer": "Oui, toute convention de stage doit être signée en 3 exemplaires : vous, l'entreprise, et l'université. Soumettez votre convention au Career Center (careercenter@aui.ma) ou à votre responsable de programme. Le délai de traitement est de 5 à 7 jours ouvrés. Le stage ne peut débuter légalement qu'après la signature des trois parties.",
+    "tags": ["convention de stage", "signature", "légal", "entreprise"],
+    "validated": true
+  },
+  {
+    "id": "stg_004",
+    "category": "stage_carriere",
+    "language": "en",
+    "question": "Does AUI help with resume and cover letter writing?",
+    "answer": "Yes, the AUI Career Center offers free resume and cover letter review sessions. Schedule an appointment at career.aui.ma > Book Appointment. Career advisors will review your documents and provide personalized feedback. The Career Center also runs regular workshops on professional writing, LinkedIn optimization, and interview preparation.",
+    "tags": ["resume", "cover letter", "career center", "workshop"],
+    "validated": true
+  },
+  {
+    "id": "stg_005",
+    "category": "stage_carriere",
+    "language": "fr",
+    "question": "Y a-t-il des opportunités d'emploi à temps partiel pour les étudiants AUI ?",
+    "answer": "AUI propose des postes d'assistants de recherche, tuteurs, ou assistants administratifs pour les étudiants en règle académique. Ces postes sont publiés sur career.aui.ma > Campus Jobs. Des emplois à temps partiel hors campus chez des partenaires locaux sont aussi disponibles. Le nombre d'heures est plafonné pour ne pas affecter les études.",
+    "tags": ["emploi", "temps partiel", "campus", "assistant"],
+    "validated": true
+  },
+  {
+    "id": "stg_006",
+    "category": "stage_carriere",
+    "language": "en",
+    "question": "How do I get a certificate of internship completion from AUI?",
+    "answer": "After completing your internship, submit your internship report and evaluation form (signed by your supervisor) to the Career Center. Upon validation, AUI will issue an official certificate of internship completion. Processing takes 5-10 business days. This certificate can also serve as proof of professional experience for future job applications.",
+    "tags": ["internship", "certificate", "completion", "report"],
+    "validated": true
+  },
+  {
+    "id": "stg_007",
+    "category": "stage_carriere",
+    "language": "fr",
+    "question": "AUI organise-t-elle des événements de networking avec des entreprises ?",
+    "answer": "Oui, AUI organise plusieurs événements de networking : Career Fair (2 fois par an), des conférences professionnelles (AUI Talks), des visites d'entreprises partenaires, et des sessions de recrutement sur campus. Ces événements sont annoncés sur career.aui.ma et via l'email universitaire. La participation est fortement recommandée dès la 2ème année.",
+    "tags": ["networking", "recrutement", "Career Fair", "entreprises"],
+    "validated": true
+  },
+  {
+    "id": "stg_008",
+    "category": "stage_carriere",
+    "language": "fr",
+    "question": "Mon stage à l'étranger est-il reconnu par AUI ?",
+    "answer": "Les stages à l'étranger sont reconnus si l'entreprise est légalement enregistrée, que la convention de stage est signée par les 3 parties, et que le stage correspond à votre domaine d'études. Certains programmes exigent une validation préalable de l'entreprise par le responsable de programme. Contactez votre advisor et le Career Center avant de commencer.",
+    "tags": ["stage étranger", "international", "reconnaissance", "convention"],
+    "validated": true
+  },
+  {
+    "id": "stg_009",
+    "category": "stage_carriere",
+    "language": "en",
+    "question": "How can I access AUI alumni network for career opportunities?",
+    "answer": "AUI has an active alumni network with over 5,000 graduates worldwide. As a current student, you can access the alumni directory through career.aui.ma > Alumni Network after registering. Many alumni are willing to do informational interviews or mentoring. LinkedIn groups for AUI alumni are also active and searchable.",
+    "tags": ["alumni", "network", "linkedin", "mentoring"],
+    "validated": true
+  },
+  {
+    "id": "stg_010",
+    "category": "stage_carriere",
+    "language": "fr",
+    "question": "Comment créditer mon stage dans mon programme académique ?",
+    "answer": "Pour créditer votre stage, il doit être approuvé par votre responsable de programme AVANT de commencer. À la fin du stage, remettez votre rapport de stage et l'évaluation de votre superviseur. Le nombre de crédits accordés varie selon la durée (généralement 3 crédits pour 2 mois). Consultez votre advisor académique pour les modalités spécifiques à votre programme.",
+    "tags": ["crédits", "stage", "académique", "rapport"],
+    "validated": true
+  }
+]

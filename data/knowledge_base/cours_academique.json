@@ -1,0 +1,92 @@
+[
+  {
+    "id": "crs_001",
+    "category": "cours_academique",
+    "language": "fr",
+    "question": "Comment puis-je accéder à mes notes du semestre ?",
+    "answer": "Vos notes sont disponibles sur MyAUI > Relevés Académiques > Notes du semestre en cours. Elles sont mises à jour par les enseignants dans les 2 semaines suivant les examens finaux. Pour contester une note, soumettez une demande de révision via MyAUI dans les 5 jours ouvrés suivant la publication.",
+    "tags": ["notes", "relevé", "résultats", "myaui"],
+    "validated": true
+  },
+  {
+    "id": "crs_002",
+    "category": "cours_academique",
+    "language": "fr",
+    "question": "Comment obtenir mon relevé de notes officiel ?",
+    "answer": "Le relevé de notes officiel (transcript) peut être demandé via MyAUI > Documents > Relevé de notes. Le délai de traitement est de 3 à 5 jours ouvrés. Des frais administratifs de 50 MAD s'appliquent par exemplaire. Pour un relevé urgent, présentez-vous à la Scolarité avec votre carte étudiante.",
+    "tags": ["relevé de notes", "transcript", "officiel", "document"],
+    "validated": true
+  },
+  {
+    "id": "crs_003",
+    "category": "cours_academique",
+    "language": "fr",
+    "question": "Comment puis-je changer mon emploi du temps ou ajouter/supprimer un cours ?",
+    "answer": "Les ajouts et suppressions de cours sont possibles durant la période d'Add/Drop (généralement les 2 premières semaines du semestre). Connectez-vous à MyAUI > Inscription aux Cours. Vérifiez les prérequis et la disponibilité des places. Après la période d'Add/Drop, un formulaire signé par votre advisor est requis.",
+    "tags": ["emploi du temps", "add drop", "cours", "inscription"],
+    "validated": true
+  },
+  {
+    "id": "crs_004",
+    "category": "cours_academique",
+    "language": "en",
+    "question": "I think there is an error in my final grade. How do I request a grade review?",
+    "answer": "To request a grade review, submit a formal Grade Appeal form through MyAUI > Academic > Grade Appeal within 5 business days of grade publication. Include your student ID, course code, and specific reason for the appeal. The reviewing professor has 10 business days to respond. Contact your academic advisor if unresolved.",
+    "tags": ["grade", "appeal", "review", "final grade"],
+    "validated": true
+  },
+  {
+    "id": "crs_005",
+    "category": "cours_academique",
+    "language": "fr",
+    "question": "Combien de crédits dois-je valider par semestre pour rester en bonne standing académique ?",
+    "answer": "Pour rester en bonne standing académique à AUI, vous devez maintenir un GPA minimum de 2.0 (sur 4.0) et valider au moins 12 crédits par semestre (pour les étudiants à temps plein). En dessous de ces seuils, vous serez placé en probation académique. Consultez votre advisor académique pour un plan de rattrapage.",
+    "tags": ["crédits", "gpa", "standing académique", "probation"],
+    "validated": true
+  },
+  {
+    "id": "crs_006",
+    "category": "cours_academique",
+    "language": "fr",
+    "question": "Comment obtenir une dérogation pour un cours dont je n'ai pas les prérequis ?",
+    "answer": "Pour obtenir une dérogation (prerequisite waiver), contactez le responsable du département concerné avec une justification écrite et vos relevés de notes. Avec l'accord du professeur et du responsable de département, soumettez le formulaire de dérogation à la Scolarité. Ce processus prend généralement 5 à 7 jours ouvrés.",
+    "tags": ["dérogation", "prérequis", "waiver", "cours"],
+    "validated": true
+  },
+  {
+    "id": "crs_007",
+    "category": "cours_academique",
+    "language": "en",
+    "question": "How do I request an Incomplete grade instead of failing a course?",
+    "answer": "An Incomplete (I) grade can be requested if you have a documented medical or personal emergency preventing course completion. Contact your professor and submit an Incomplete Grade Request to the Registrar's Office before the last day of classes. You must complete the remaining work within the following semester, otherwise the grade converts to F.",
+    "tags": ["incomplete", "grade", "emergency", "registrar"],
+    "validated": true
+  },
+  {
+    "id": "crs_008",
+    "category": "cours_academique",
+    "language": "fr",
+    "question": "Puis-je assister à un cours avant de m'y inscrire officiellement ?",
+    "answer": "Oui, AUI autorise l'audit de cours (assister sans être inscrit) pendant la première semaine. Parlez directement au professeur pour obtenir son accord. Notez que l'audit ne génère pas de crédits et n'apparaît pas sur votre relevé. L'inscription officielle via MyAUI reste obligatoire pour valider le cours.",
+    "tags": ["audit", "cours", "assistance", "inscription"],
+    "validated": true
+  },
+  {
+    "id": "crs_009",
+    "category": "cours_academique",
+    "language": "fr",
+    "question": "Comment connaître l'emploi du temps de la prochaine session d'examens ?",
+    "answer": "Le calendrier des examens finaux est publié sur MyAUI > Examens 4 à 6 semaines avant la fin du semestre. Il est également affiché sur les tableaux d'affichage de chaque école. En cas de conflit d'horaire entre deux examens, signalez-le immédiatement au Bureau du Registraire : registrar@aui.ma.",
+    "tags": ["examens", "calendrier", "horaire", "session"],
+    "validated": true
+  },
+  {
+    "id": "crs_010",
+    "category": "cours_academique",
+    "language": "en",
+    "question": "Can I take classes at another university and transfer the credits to AUI?",
+    "answer": "Credit transfer from another accredited institution is possible but requires prior approval. Submit a Transfer Credit Request to the Registrar's Office with the course syllabus from the other institution. The relevant department head will evaluate equivalency. Note: AUI accepts transfers only from accredited universities and may impose a minimum grade requirement (usually C or above).",
+    "tags": ["transfer", "credits", "external", "equivalency"],
+    "validated": true
+  }
+]

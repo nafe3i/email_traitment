@@ -1,0 +1,92 @@
+[
+  {
+    "id": "gen_001",
+    "category": "general",
+    "language": "fr",
+    "question": "Quels sont les contacts principaux de l'université AUI ?",
+    "answer": "Contacts principaux AUI : Admissions (admissions@aui.ma), Scolarité/Finances (finance@aui.ma), IT Help Desk (helpdesk@aui.ma), Bibliothèque LRC (library@aui.ma), Career Center (careercenter@aui.ma), Vie Étudiante (sve@aui.ma), Relations Internationales (international@aui.ma). Standard général : +212 535 862 000. Site web : www.aui.ma.",
+    "tags": ["contact", "email", "téléphone", "administration"],
+    "validated": true
+  },
+  {
+    "id": "gen_002",
+    "category": "general",
+    "language": "en",
+    "question": "What is the academic calendar for AUI?",
+    "answer": "AUI follows a semester system: Fall Semester (September to December) and Spring Semester (February to May). A Summer Session is available (June to August) for select courses. The detailed academic calendar including add/drop periods, exam dates, and holidays is published on myaui.ma each year. Check the registrar's page for the current year's calendar.",
+    "tags": ["academic calendar", "semester", "dates", "schedule"],
+    "validated": true
+  },
+  {
+    "id": "gen_003",
+    "category": "general",
+    "language": "fr",
+    "question": "Comment contacter le Président de l'université ?",
+    "answer": "Le Bureau du Président d'AUI est accessible via president@aui.ma pour les demandes formelles. Pour les questions académiques ou administratives courantes, il est recommandé de passer d'abord par votre département, votre advisor académique, ou le service concerné. Le Président reçoit également lors de ses heures de bureau annoncées sur le site www.aui.ma.",
+    "tags": ["président", "administration", "contact", "bureau"],
+    "validated": true
+  },
+  {
+    "id": "gen_004",
+    "category": "general",
+    "language": "fr",
+    "question": "Quelles sont les langues d'enseignement à AUI ?",
+    "answer": "Al Akhawayn University enseigne principalement en anglais, conformément à son modèle américain. Certains cours sont disponibles en français. Des cours d'arabe et de français sont obligatoires pour tous les étudiants. Les communications officielles sont en anglais et en français. AUI est donc une université trilingue (arabe, français, anglais).",
+    "tags": ["langue", "enseignement", "anglais", "trilingue"],
+    "validated": true
+  },
+  {
+    "id": "gen_005",
+    "category": "general",
+    "language": "fr",
+    "question": "Comment soumettre une réclamation ou une plainte officielle à AUI ?",
+    "answer": "Pour soumettre une réclamation officielle, utilisez le formulaire de grievance disponible sur MyAUI > Administration > Soumettre une réclamation. Décrivez clairement la situation avec dates et preuves. Les réclamations sont traitées par le Bureau de l'Ombudsman dans un délai de 10 jours ouvrés. Pour les situations urgentes, contactez le Doyen des Étudiants : deanofstudents@aui.ma.",
+    "tags": ["réclamation", "plainte", "grievance", "ombudsman"],
+    "validated": true
+  },
+  {
+    "id": "gen_006",
+    "category": "general",
+    "language": "en",
+    "question": "Does AUI offer distance or online learning options?",
+    "answer": "AUI offers a hybrid learning model. While primarily residential, some courses and programs are available online through the Moodle platform and Microsoft Teams. During exceptional circumstances, full online instruction is available. Executive education and certificate programs can be taken fully online. Check the current semester's course catalog on myaui.ma for online/hybrid availability.",
+    "tags": ["online", "distance learning", "hybrid", "moodle"],
+    "validated": true
+  },
+  {
+    "id": "gen_007",
+    "category": "general",
+    "language": "fr",
+    "question": "Où puis-je trouver le règlement intérieur de l'université ?",
+    "answer": "Le règlement intérieur d'AUI (Student Handbook) est disponible en téléchargement sur www.aui.ma > Étudiants > Règlements, et sur MyAUI > Documents > Student Handbook. Ce document couvre le code de conduite, les politiques académiques, les droits et responsabilités des étudiants, et les procédures disciplinaires. Chaque étudiant est censé en prendre connaissance dès son inscription.",
+    "tags": ["règlement", "student handbook", "code de conduite", "politique"],
+    "validated": true
+  },
+  {
+    "id": "gen_008",
+    "category": "general",
+    "language": "fr",
+    "question": "AUI est-elle accréditée ? Par quels organismes ?",
+    "answer": "Al Akhawayn University est accréditée par le Ministère de l'Éducation Nationale du Maroc. Les programmes de gestion sont accrédités par AACSB (Association to Advance Collegiate Schools of Business) — l'une des plus prestigieuses accréditations mondiales. AUI est également membre de l'Association des Universités Africaines (AUA) et de l'Association des Universités de la Méditerranée.",
+    "tags": ["accréditation", "AACSB", "reconnaissance", "qualité"],
+    "validated": true
+  },
+  {
+    "id": "gen_009",
+    "category": "general",
+    "language": "en",
+    "question": "How do I report a lost ID card?",
+    "answer": "If you lose your AUI student ID card, report it immediately to the Security Office at the main campus entrance. They will deactivate the lost card to prevent misuse. To get a replacement, go to the Administration Building with a passport photo and proof of identity. A replacement fee of 50 MAD applies. Processing takes 1-2 business days.",
+    "tags": ["lost ID", "student card", "replacement", "security"],
+    "validated": true
+  },
+  {
+    "id": "gen_010",
+    "category": "general",
+    "language": "fr",
+    "question": "Puis-je amener mon véhicule sur le campus ?",
+    "answer": "Les étudiants peuvent stationner sur le campus après avoir enregistré leur véhicule auprès du Bureau de Sécurité. Présentez votre carte grise, permis de conduire, et carte étudiante. Un badge de stationnement vous sera délivré. Le stationnement est gratuit pour les étudiants dans les zones désignées. La vitesse sur le campus est limitée à 20 km/h.",
+    "tags": ["véhicule", "parking", "stationnement", "badge"],
+    "validated": true
+  }
+]
