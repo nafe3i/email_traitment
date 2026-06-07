@@ -40,12 +40,16 @@ class OllamaClient:
     def embed(self, text: str) -> Optional[list]:
         try:
             r = requests.post(
-                f"{OLLAMA_BASE}/api/embeddings",
-                json={"model": EMBED_MODEL, "prompt": text},
+                f"{OLLAMA_BASE}/api/embed",
+                json={"model": EMBED_MODEL, "input": text},
                 timeout=OLLAMA_TIMEOUT,
             )
             r.raise_for_status()
-            return r.json().get("embedding")
+            data = r.json()
+            embedding = data.get("embeddings", [[]])[0]
+            if not embedding:
+                raise ValueError(f"Ollama a retourné un vecteur vide pour le modèle {EMBED_MODEL}")
+            return embedding
         except Exception as e:
             logger.error(f"Ollama embed error: {e}")
             return None
@@ -163,14 +167,36 @@ class EmailProcessor:
             logger.exception(f"Error processing email {email_id}")
             record["error"] = str(e)
 
+        if self.gmail and self._should_mark_read(record):
+            from gmail_service import mark_email_as_read
+            mark_email_as_read(self.gmail, email_id)
+
         self._finalize(record, started_at)
         return record
 
+    @staticmethod
+    def _should_mark_read(record: dict) -> bool:
+        err = record.get("error")
+        if err is None:
+            return True
+        if isinstance(err, str) and err.startswith("skipped:"):
+            return True
+        return False
+
     def _query_chroma(self, vector: list, where: Optional[dict], n: int = TOP_K) -> list:
         try:
-            kwargs = {"query_embeddings": [vector], "n_results": min(n, self.collection.count())}
+            count = self.collection.count()
+            if count == 0:
+                logger.warning("ChromaDB : collection vide, RAG non disponible pour cette requête")
+                return []
+
+            kwargs = {
+                "query_embeddings": [vector],
+                "n_results": min(n, count),
+            }
             if where:
                 kwargs["where"] = where
+
             results = self.collection.query(**kwargs)
             docs = results.get("documents", [[]])[0]
             meta = results.get("metadatas", [[]])[0]
@@ -266,9 +292,15 @@ class EmailProcessor:
             msg["to"]      = to
             msg["subject"] = f"Re: {subject}"
             raw = base64.urlsafe_b64encode(msg.as_bytes()).decode()
+            original = self.gmail.users().messages().get(
+                userId="me",
+                id=email_id,
+                format="metadata",
+            ).execute()
+            thread_id = original.get("threadId", email_id)
             self.gmail.users().messages().send(
                 userId="me",
-                body={"raw": raw, "threadId": email_id},
+                body={"raw": raw, "threadId": thread_id},
             ).execute()
             return True
         except Exception as e:
