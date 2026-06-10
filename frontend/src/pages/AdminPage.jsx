@@ -10,7 +10,7 @@ import {
 } from '../components/emails/StatusBadge'
 import useAuthStore from '../store/useAuthStore'
 import useAutoRefresh from '../hooks/useAutoRefresh'
-import { useToast } from '../hooks/useToast'
+import useToastStore from '../hooks/useToast'
 import { errorMessage } from '../api/client'
 import { getHealth, seedKnowledgeBase, resetAll } from '../api/system'
 import { getUsers, changeUserRole, deleteUser } from '../api/users'
@@ -53,7 +53,11 @@ function StatusCard({ icon, label, value, sub, accent = 'text-text' }) {
 
 export default function AdminPage() {
   const currentUser = useAuthStore((s) => s.user)
-  const { success, error } = useToast()
+  // Select the store action once (stable reference) and wrap it in memoized
+  // helpers so callbacks that depend on them don't change every render.
+  const pushToast = useToastStore((s) => s.push)
+  const success = useCallback((msg) => pushToast(msg, 'success'), [pushToast])
+  const error = useCallback((msg) => pushToast(msg, 'error'), [pushToast])
 
   // ── Section 1: System status ──────────────────────────────
   const [health, setHealth] = useState(null)
