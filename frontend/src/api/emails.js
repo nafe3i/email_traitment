@@ -48,8 +48,7 @@ export async function runGmail() {
   return data // { processed }
 }
 
-export async function processEmail(payload) {
-  // payload: { subject, body, sender }
-  const { data } = await client.post('/emails/process', payload)
+export async function processEmail(subject, body, sender) {
+  const { data } = await client.post('/emails/process', { subject, body, sender })
   return normalizeEmail(data)
 }

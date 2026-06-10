@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import useAuthStore from '../../store/useAuthStore'
 
 const NAV = [
   { to: '/dashboard', label: 'Dashboard', icon: '▦' },
@@ -8,6 +9,12 @@ const NAV = [
 ]
 
 export default function Sidebar({ open, onClose }) {
+  const user = useAuthStore((s) => s.user)
+  const nav =
+    user?.role === 'admin'
+      ? [...NAV, { to: '/admin', label: 'Admin', icon: '🛡' }]
+      : NAV
+
   return (
     <>
       {/* Mobile backdrop */}
@@ -35,7 +42,7 @@ export default function Sidebar({ open, onClose }) {
         </div>
 
         <nav className="flex-1 space-y-1 px-3 py-2">
-          {NAV.map((item) => (
+          {nav.map((item) => (
             <NavLink
               key={item.to}
               to={item.to}
