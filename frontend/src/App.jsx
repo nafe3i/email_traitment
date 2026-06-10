@@ -11,12 +11,22 @@ import DashboardPage from './pages/DashboardPage'
 import PendingPage from './pages/PendingPage'
 import HistoryPage from './pages/HistoryPage'
 import StatsPage from './pages/StatsPage'
+import AdminPage from './pages/AdminPage'
 
 function ProtectedRoute({ children }) {
   const token = useAuthStore((s) => s.token)
   const location = useLocation()
   if (!token) {
     return <Navigate to="/login" state={{ from: location }} replace />
+  }
+  return children
+}
+
+// Admin-only guard: redirects non-admins to the dashboard.
+function AdminRoute({ children }) {
+  const user = useAuthStore((s) => s.user)
+  if (user && user.role !== 'admin') {
+    return <Navigate to="/dashboard" replace />
   }
   return children
 }
@@ -68,6 +78,14 @@ export default function App() {
           <Route path="/pending" element={<PendingPage />} />
           <Route path="/history" element={<HistoryPage />} />
           <Route path="/stats" element={<StatsPage />} />
+          <Route
+            path="/admin"
+            element={
+              <AdminRoute>
+                <AdminPage />
+              </AdminRoute>
+            }
+          />
         </Route>
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
         <Route path="*" element={<Navigate to="/dashboard" replace />} />
